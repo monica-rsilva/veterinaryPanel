@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts Aleo e Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- link style css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- link app javascript -->
+    <script src="./js/app.js" defer></script>
+
+    <title> Painel Veterinário </title>
+</head>
+<body>
+
+    <!-- Cabeçalho do painel, destinado a logo da clínica, nome, data e hora -->
+    <header>
+        <img src="./assets/logo.png" alt="logo_clinic">
+        <h1> Clínica Dr. Animal </h1>
+        <div class="box_dateTime">
+            <img src="assets/calendar.png" alt="calendar icon" class="icon">
+
+            <div class="date_time">
+                <span id="time"></span>
+                <span id="date"></span>   
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="generate_password">
+           <p>Retire sua senha e aguarde ser chamado</p> 
+
+           <div class="buttons">
+                <button class="generate" onclick="generatePasswords('P')">
+                    <strong>P</strong>
+                    <span>Preferencial</span>
+                </button>
+
+                <button class="generate" onclick="generatePasswords('C')">
+                    <strong>C</strong>
+                    <span>Comum</span>
+                </button>
+           </div>
+
+           <div class="passwords">
+                <p>Fila de Atendimento</p>
+
+                <ul id="generated_passwords"></ul>
+
+                <div id="skeleton"></div>
+                <div id="skeleton"></div>
+                <div id="skeleton"></div>
+                <div id="skeleton"></div>
+           </div>
+
+        </section>
+
+        <section class="about_us">
+            <div class="carousel">
+                imagem aqui
+            </div>
+
+            <div class="description">
+                <p>Compromisso com a saúde e o bem estar animal.</p>
+                <strong>Seu pet em boas mãos!</strong>
+            </div>
+        </section>
+
+        <section class="password_called">
+
+        </section>
+    </main>
+</body>
+</html>
