@@ -22,7 +22,7 @@
     <!-- Cabeçalho do painel, destinado a logo da clínica, nome, data e hora -->
     <header>
         <img src="./assets/logo.png" alt="logo_clinic">
-        <h1> Clínica Dr. Animal </h1>
+        <h1>Clínica Dr. Animal</h1>
         <div class="box_dateTime">
             <img src="assets/calendar.png" alt="calendar icon" class="icon">
 
@@ -35,8 +35,9 @@
 
     <main>
         <section class="generate_password">
-           <p>Retire sua senha e aguarde ser chamado</p> 
 
+            <p> Retire sua senha e <span> aguarde ser chamado</span></p> 
+            
            <div class="buttons">
                 <button class="generate" onclick="generatePasswords('P')">
                     <strong>P</strong>
@@ -50,30 +51,54 @@
            </div>
 
            <div class="passwords">
-                <p>Fila de Atendimento</p>
+                <p>ÚLTIMAS SENHAS GERADAS</p>
 
                 <ul id="generated_passwords"></ul>
 
-                <div id="skeleton"></div>
-                <div id="skeleton"></div>
-                <div id="skeleton"></div>
-                <div id="skeleton"></div>
+                <div id="skeleton_1" class="skeleton"></div>
+                <div id="skeleton_1" class="skeleton"></div>
+                <div id="skeleton_1" class="skeleton"></div>
+                <div id="skeleton_1" class="skeleton"></div>
            </div>
 
         </section>
 
         <section class="about_us">
-            <div class="carousel">
-                imagem aqui
+            <div class="image">
+                <img src="./assets/image.png" alt="imagem de uma veterinária com um gato e cachorro nas mãos">
             </div>
 
             <div class="description">
-                <p>Compromisso com a saúde e o bem estar animal.</p>
-                <strong>Seu pet em boas mãos!</strong>
+                <p>Compromisso com a saúde e o bem estar <span>animal, o melhor da medicina veterinária.</span></p>
+                <strong>SEU PET EM BOAS MÃOS</strong>
             </div>
         </section>
 
         <section class="password_called">
+            <div class="current_password">
+                <div class="current_password_number">
+                    <span>SENHA</span>
+                    <strong id="password_number" >- -</strong>
+                </div>
+
+                <div class="current_password_guiche">
+                    <span>GUICHÊ</span>
+                    <strong id="guiche_number">- -</strong>
+                </div>
+
+            </div>
+            <button id="next" class="next_password" onclick="nextPassword()">Chamar próxima senha</button>
+
+            <div class="previous_passwords">
+                <span>ÚLTIMAS CHAMADAS</span>
+    
+                <ul id="previous_passwords_list"></ul>
+    
+                <div id="skeleton_2" class="skeleton"></div>
+                <div id="skeleton_2" class="skeleton"></div>
+                <div id="skeleton_2" class="skeleton"></div>
+                <div id="skeleton_2" class="skeleton"></div>
+            </div>
 
         </section>
     </main>

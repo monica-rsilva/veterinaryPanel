@@ -13,6 +13,7 @@ li{
 :root{
     --primary_color:#009D71;
     --secondary_color:#ffffff;
+    --tertiary_color:#616161;
 }
 
 body{
@@ -64,7 +65,7 @@ h1{
     flex-direction: column;
     font-family: "Aleo", serif;
     font-weight: 400;
-    color: #616161;
+    color: var(--tertiary_color);
 }
 
 main{
@@ -72,11 +73,54 @@ main{
     height: 85%;
     display: flex;
     flex-direction: row;
+    font-family: 'Roboto', sans-serif;
 }
 
 .generate_password{
     width: calc(100%/3);
     height: 100%;
+
+    p{
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        font-size: 2rem;
+        background-color: var(--primary_color);
+        color: var(--secondary_color);
+        align-items: center;
+        justify-content: center;
+
+        span{
+            display: flex;
+            justify-content: center;
+            padding-left: 35px;
+        }
+    }
+}
+
+#generated_passwords{
+    display: flex;
+    flex-direction: column;
+    padding-top: 6px;
+}
+
+.passwords{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px; 
+
+    p{
+        display: flex;
+        height: 55px;
+        font-size: 1.75rem;
+        font-weight: 600;
+        background-color: var(--secondary_color);
+        color: var(--tertiary_color);
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .buttons{
@@ -116,32 +160,25 @@ main{
     margin-top: 8%;
 }
 
-.passwords{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    padding-top: 15px; 
-}
 
 li{
     width: 100%;
-    
-    font-family: "Roboto", sans-serif;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2px;
     background-color: #e6e6e6;
     font-size: 2.5rem;
-    border: 2px solid rgb(125, 180, 150);
+    color: var(--tertiary_color);
 }
 
-#skeleton {
+.skeleton {
     background: linear-gradient(90deg, #e6e6e6 0%, #f2f2f2 50%, #e6e6e6 100%);
     background-size: 200% 100%;
     animation: loading 8s infinite;
     height: 50px;
-    margin-top: 2.5px;
+    margin-top: 2px;
   }
 
   @keyframes loading {
@@ -154,17 +191,137 @@ li{
     height: 100%;
 }
 
-.carousel{
-    height: 75%;
-    background-color: red;
+.image img{
+    display: flex;
+    width: 100%;
+    height: 62vh;
+    object-fit: cover;
 }
 
 .description{
-    height: 25%;
+    width: 100%;
+    height: 27%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--primary_color);
     align-items: center;
+    color: var(--tertiary_color);
+    background-color: #c7c6c627;
+
+    gap: 15px;
+
+    p{
+        font-size: 1.1rem;
+        align-items: center;
+        align-self: center;
+        font-weight: 400;
+
+        span{
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    strong{
+        font-size: 1.75rem;
+        font-weight: 400;
+    }
 }
+
+.password_called{
+    width: calc(100%/3);
+    height: 100%;
+}
+
+.current_password{
+    height: 35%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--primary_color);
+    color: var(--secondary_color);
+    padding-top: 15px;
+    justify-content: space-around;
+    
+
+    span{
+        font-size: 1.65rem;
+        font-weight: 300;
+    }
+}
+
+.current_password_number{
+    display: flex;
+    flex-direction: column;
+
+    strong{
+        font-size: 5.5rem;
+        font-weight: 800; 
+    }
+}
+
+.piscar{
+        animation: blink 1.5s ease-in-out 2;
+}
+
+@keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+
+
+.current_password_guiche{
+    display: flex;
+    flex-direction: column;
+
+    strong{
+        font-size: 5.5rem;
+        font-weight: 800;
+    }
+}
+
+.next_password{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid var(--secondary_color);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background-color: var(--primary_color);
+    color: var(--secondary_color);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.next_password:hover{
+    background-color: #13614a;
+}
+
+.previous_passwords{
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 14px;
+
+    span{
+        height: 80px;
+        display: flex;
+        font-size: 1.75rem;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: -1px;
+        color: var(--tertiary_color);
+    }
+}
+
+
+
+
+
 
